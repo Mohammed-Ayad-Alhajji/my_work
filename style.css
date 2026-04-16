@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+}
+
+body {
+    background-color: #121212;
+    padding: 15px 20px;
+
+}
+.major_currencies {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 50px;
+}
+section .container{
+    background-color: #1E1E1E;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 3px;
+}
+section .contain_heder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+section .contain_heder img{
+    width: 24px;
+    height: 18px;
+    margin-left: 12px;
+}
+section .contain_heder p{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+section .contain_footer {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+section .contain_footer .contain {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+section .contain_footer .buying,
+section .contain_footer .sale {
+    background-color: #6C7681;
+    width: 70px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 20px;
+}
+section .contain_footer .sale{
+    background-color: #136BFB;
+}
+
+.subcurrencies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    overflow: auto;
+}
+
+table {
+    min-width: 450px;
+}
+
+table, th, td {
+    border: 1px solid #222222;
+    border-collapse: collapse;
+    color: white;
+    text-align: end;
+    height: 40px;
+}
+th, td {
+    width: 0px;
+    padding: 5px;
+    place-items: end;
+}
+table td .sale,
+table td .buying{
+    background-color: #136BFB;
+    width: 70px;
+    text-align: center;
+    border-radius: 3px;
+}
+table td .buying {
+    background-color: #6C7681;
+}
+table td img {
+    width: 30px;
+    height: 22px;
+    margin-top: 5px;
+    position: relative;
+    top: 3px;
+}
+
+/* ----------------------------------- */
+
+.form_container{
+    background-color: #171c29;;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    padding-bottom: 100px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}       
+form {
+    height: 100%;
+    overflow: auto;
+    width: 70%;
+    scrollbar-width: thin;          /* يجعله رفيعاً */
+    scrollbar-color: #555 #1e1e2d;
+}
+.container_my_many{
+    display: flex;
+    justify-content: space-around;
+}
+.save-btn{
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #008073;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 5px;
+    position: absolute;
+    top: calc(100% - 110px);
+    place-self: anchor-center;
+}
+.currency_name{
+    margin-bottom: 10px;
+    border-bottom: 2px solid #63c0e2;
+    display: inline-block;
+}
+@media (max-width: 767px) {
+    .major_currencies {
+        flex-direction: column;
+    }
+    .subcurrencies {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    form {
+        width: 100%;
+    }
+}
